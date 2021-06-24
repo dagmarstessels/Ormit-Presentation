@@ -1,0 +1,171 @@
+$ormit-blue: #1234a5;
+$ormit-red: #ef0022;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    .sidebar {
+        color: white;
+        width: 500px;
+        height: 100%;
+        background-color: $ormit-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-box-shadow: 0px 0px 25px 1px #000000;
+        box-shadow: 0px 0px 25px 1px #000000;
+        .ormit {
+            width: 200px;
+            height: 50px;
+            background-image: url("../../assets/ormit.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: white;
+            border-radius: 50px;
+            margin-top: 50px;
+        }
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button {
+                margin: 10px 0px;
+                border-radius: 20px;
+                width: 90%;
+            }
+            .mat-button,
+            .mat-flat-button {
+                background-color: white;
+                transition: background-color 0.5s ease;
+            }
+
+            .mat-button,
+            .mat-flat-button:hover {
+                color: white;
+                background-color: $ormit-red;
+            }
+        }
+    }
+    .main-content {
+        height: 100%;
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        background-image: url("../../assets/profile.JPG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+    }
+    .name {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+}
+
+mat-card {
+    width: 500px;
+    padding: 0px;
+    border-radius: 20px !important;
+    mat-card-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        font-size: 1.5rem;
+        border-radius: 20px 20px 0 0 !important;
+
+        .wrapper {
+            border-radius: 20px 20px 0 0 !important;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-variant: all-small-caps;
+                letter-spacing: 2px;
+                font-size: 2rem;
+            }
+        }
+    }
+    mat-card-content {
+        padding: 10px;
+    }
+    -webkit-box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+.welcome {
+    text-align: center;
+    h1 {
+        font-size: 2rem;
+        color: #3b3b3b;
+    }
+    h2 {
+        font-size: 1.2rem;
+        color: #5d5d5d;
+    }
+}
+tr {
+    td {
+        &:first-child {
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+.studies {
+    mat-card {
+        mat-card-header {
+            background-position: 50% 75%;
+        }
+    }
+}
+
+.hobbies {
+    mat-card {
+        mat-card-header {
+            background-position: 50% 45%;
+        }
+    }
+}
+
+.main {
+    mat-card {
+        mat-card-header {
+            background-position: 50% 40%;
+        }
+    }
+}
+
+.languages {
+    mat-card {
+        mat-card-header {
+            background-position: 50% 30%;
+        }
+    }
+}

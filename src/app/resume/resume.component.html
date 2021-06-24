@@ -1,0 +1,161 @@
+<div class="container">
+    <div class="sidebar">
+        <div class="ormit"></div>
+        <div class="me">
+            <div class="profile-image">
+            </div>
+            <h2 class="name">Dagmar Stessels</h2>
+        </div>
+
+        <div class="buttons">
+            <button mat-flat-button (click)="switchCard('basic')">Basic demographic info</button>
+            <button mat-flat-button (click)="switchCard('studies')">Studies</button>
+            <button mat-flat-button (click)="switchCard('hobbies')">Hobbies</button>
+            <button mat-flat-button (click)="switchCard('main')">Main personality traits</button>
+            <button mat-flat-button (click)="switchCard('data')">Data related experience</button>
+            <button mat-flat-button (click)="switchCard('languages')">Languages spoken</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <div *ngIf="currentCard === 'start'" [@enterAnimation] class="welcome">
+            <h1>Welcome to my presentation!</h1>
+            <h2>Click on one of the buttons on the left to get to know me</h2>
+        </div>
+        <div *ngIf="currentCard === 'basic'" class="basic" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/beerse.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Basic demographic info</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <table class="basic-info">
+                        <tr>
+                            <td>Name:</td>
+                            <td>Dagmar Stessels</td>
+                        </tr>
+                        <tr>
+                            <td>Age:</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Birthplace:</td>
+                            <td>Turnhout</td>
+                        </tr>
+                        <tr>
+                            <td>Currently living in:</td>
+                            <td>Beerse</td>
+                        </tr>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="currentCard === 'studies'" class="studies" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/kuleuven.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Studies</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <table class="studies-info">
+                        <tr>
+                            <td>High school:</td>
+                            <td>Mathematics and sciences</td>
+                        </tr>
+                        <tr>
+                            <td>Bachelor degree:</td>
+                            <td>Applied economics</td>
+                        </tr>
+                        <tr>
+                            <td>Previous master:</td>
+                            <td>Business economics</td>
+                        </tr>
+                        <tr>
+                            <td>Current studies:</td>
+                            <td>Master of information management</td>
+                        </tr>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="currentCard === 'hobbies'" class="hobbies" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/hobbies.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Hobbies</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li>Tennis</li>
+                        <li>Running</li>
+                        <li>Music</li>
+                        <li>Travelling</li>
+                        <li>Go out for a dinner/drink</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="currentCard === 'main'" class="main" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/mountains.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Main personality traits</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <div style="display: flex; flex-direction: column;">
+                        <p style="margin: 0;">Positive traits:</p>
+                        <ul style="margin: 0 0 10px 0">
+                            <li>Helpful</li>
+                            <li>Driven</li>
+                            <li>Positive-minded</li>
+                        </ul>
+                        <p style="margin: 0;">Negative traits:</p>
+                        <ul>
+                            <li>Stubborn</li>
+                            <li>Perfectionist</li>
+                        </ul>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="currentCard === 'data'" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/laptop.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Data related experience</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li>R studio</li>
+                        <li>SAS</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div *ngIf="currentCard === 'languages'" class="languages" [@enterAnimation]>
+            <mat-card>
+                <mat-card-header [style.background-image]="'url(../../assets/view.jpeg)'">
+                    <div class="wrapper">
+                        <h1>Languages spoken</h1>
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li>Dutch</li>
+                        <li>English</li>
+                        <li>French</li>
+                        <li>German</li>
+                        <li>Spanish</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
